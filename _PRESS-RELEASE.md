@@ -19,17 +19,27 @@ Once the project moves into development, the press release can be used as a touc
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
+FFRandom
+
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+
+This is for the final fantasy fan who enjoys seeing fun facts/lore about the franchises characters.
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
+A click of a button serves up a random character from the Final Fantasy series.
+
 ## Problem ##
   > Describe the problem your product solves.
 
+A quick and easy way to see characters from the games, along with a bit of trivia about each.
+
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  
+Using a one-click approach to serve up the information without needing to reload the page.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
