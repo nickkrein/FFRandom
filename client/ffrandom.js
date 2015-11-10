@@ -1,13 +1,27 @@
 angular.module('ffrandom', [])
 
 .controller('CharacterController', ['$scope', 'Characters', function($scope, Characters){
-  $scope.chars = {test:'test'};
-  $scope.getChars = function() {
-    Characters.getChars().then(function(data){
-      $scope.chars.characters = data.results.characters;
-    })
+  $scope.chars = {};
+  $scope.random = {};
+  // $scope.getChars = function() {
+  //   Characters.getChars().then(function(data){
+  //     $scope.chars.characters = data.results.characters;
+  //   })
+  // }
+  $scope.randomChar = function() {
+    $scope.random = $scope.chars.characters[Math.floor(Math.random() * ($scope.chars.characters.length))]
   }
-  $scope.getChars();
+  var obj = Characters.getChars();
+
+  obj.then(function(response){
+    console.log("this is the response object:", response);
+    $scope.chars.characters = response.data.results.characters;
+    console.log($scope.chars.characters);
+  }).then(function(){
+    $scope.randomChar()
+  });
+
+  // $scope.randomChar();
 }])
 
 .factory('Characters', function($http){
@@ -23,10 +37,6 @@ angular.module('ffrandom', [])
         field_list: 'characters'
       }
       // responseType: 'json'
-    })
-    .then(function(resp){
-      console.log(resp.data);
-      return resp.data;
     })
   }
   return {
