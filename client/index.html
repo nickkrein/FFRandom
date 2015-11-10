@@ -2,12 +2,14 @@
 <html ng-app='ffrandom'>
 <head>
     <title></title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
 </head>
 <body>
 
     <h1 style="text-align:center">FFRANDOM</h1>
     <div ng-controller='CharacterController'>
       <pre>{{ randomSecond }}</pre>
+      <img class='image' ng-src="{{randomSecond.image.medium_url}}" />
     </div>
 
 </body>
