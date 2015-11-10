@@ -32,12 +32,11 @@ angular.module('ffrandom', [])
     console.log($scope.randomSecond)
   });
 
-  // $scope.randomChar();
 }])
 
 .factory('Characters', function($http){
   var getChars = function (){
-    var url = 'http://www.giantbomb.com/api/game/3030-8825/';
+    var url = 'http://www.giantbomb.com/api/game/3030-13053/';
     return $http({
       method: 'jsonp',
       url: url,
@@ -47,7 +46,6 @@ angular.module('ffrandom', [])
         api_key : 'dcf0322756d855aeef3a2128fd06f4bd6d7b0366',
         field_list: 'characters'
       }
-      // responseType: 'json'
     })
   }
   var charInfo = function(charUrl) {
