@@ -4,33 +4,25 @@ angular.module('ffrandom', [])
   $scope.chars = {};
   $scope.randomFirst = {};
   $scope.randomSecond = {};
-  // $scope.getChars = function() {
-  //   Characters.getChars().then(function(data){
-  //     $scope.chars.characters = data.results.characters;
-  //   })
-  // }
+
   $scope.randomChar = function() {
     $scope.randomFirst = $scope.chars.characters[Math.floor(Math.random() * ($scope.chars.characters.length))]
   }
   $scope.randomInfo = function(response) {
     $scope.randomSecond = response.data.results;
   }
-  // var obj = Characters.getChars();
 
   $scope.getChars = function(){
     Characters.getChars().then(function(response){
       $scope.chars.characters = response.data.results.characters;
       return $scope.chars;
     }).then(function(response){
-      // console.log(response)
       $scope.randomChar()
       return $scope.randomFirst;
     }).then(function(response){
-      // console.log(response)
       return Characters.charInfo($scope.randomFirst.api_detail_url)
     }).then(function(response){
       $scope.randomInfo(response);
-      // console.log($scope.randomSecond)
     });
   }
   $scope.getChars()
