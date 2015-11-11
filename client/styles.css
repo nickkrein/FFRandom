@@ -10,17 +10,20 @@ body {
   height:400px;
 }
 
-.name {
-  font-size: 20px;
-  font-family:  Verdana;
-  display:inline-block;
-  font-style: 700;
-  font-size: 32px;
+.box {
   border-radius: 10px;
   border: 1px solid white;
   border-width: 3px;
   color:white;
-  background: linear-gradient(to bottom right, blue, black); 
+  background: linear-gradient(to bottom right, blue, black);
+}
+
+.name {
+  font-size: 20px;
+  font-family: Verdana;
+  display:inline-block;
+  font-style: 700;
+  font-size: 32px; 
   margin: 1px auto;
   padding: 3px 20px;
   text-decoration: none;
@@ -37,13 +40,8 @@ body {
   margin: 5px auto;
   width: 50%;
   font-family: Verdana;
-  font-size: 20px;
+  font-size: 25px;
   padding: 3px 5px;
-  border-radius: 10px;
-  border: 1px solid white;
-  border-width: 3px;
-  color:white;
-  background: linear-gradient(to bottom right, blue, black);
   text-shadow: 2px 2px 2px #000;
 }
 
@@ -63,24 +61,12 @@ body {
 .roulette {
   width: 200px;
   height: 50px;
-  border-radius: 10px;
-  border: 1px solid white;
-  border-width: 3px;
-  color:white;
   font-family: Verdana;
-  font-size: 30px;
-  background: linear-gradient(to bottom right, blue, black); 
+  font-size: 30px; 
   display:block;
   margin: 5px auto;
   cursor:pointer;
   outline: none;
   text-shadow: 2px 2px 2px #000;
   padding-bottom: 20px
-}
-
-.container {
-  border-radius: 10px;
-  border: 1px solid white;
-  border-width: 3px;
-  background: linear-gradient(to bottom right, blue, black);
 }
