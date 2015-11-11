@@ -15,23 +15,25 @@ angular.module('ffrandom', [])
   $scope.randomInfo = function(response) {
     $scope.randomSecond = response.data.results;
   }
-  var obj = Characters.getChars();
+  // var obj = Characters.getChars();
 
-  obj.then(function(response){
-    $scope.chars.characters = response.data.results.characters;
-    return $scope.chars;
-  }).then(function(response){
-    console.log(response)
-    $scope.randomChar()
-    return $scope.randomFirst;
-  }).then(function(response){
-    console.log(response)
-    return Characters.charInfo($scope.randomFirst.api_detail_url)
-  }).then(function(response){
-    $scope.randomInfo(response);
-    console.log($scope.randomSecond)
-  });
-
+  $scope.getChars = function(){
+    Characters.getChars().then(function(response){
+      $scope.chars.characters = response.data.results.characters;
+      return $scope.chars;
+    }).then(function(response){
+      // console.log(response)
+      $scope.randomChar()
+      return $scope.randomFirst;
+    }).then(function(response){
+      // console.log(response)
+      return Characters.charInfo($scope.randomFirst.api_detail_url)
+    }).then(function(response){
+      $scope.randomInfo(response);
+      // console.log($scope.randomSecond)
+    });
+  }
+  $scope.getChars()
 }])
 
 .factory('Characters', function($http){

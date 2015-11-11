@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html ng-app='ffrandom'>
 <head>
-    <title></title>
+    <title>FFRANDOM</title>
     <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="shortcut icon" type="image/ico" href="/assets/vivi.png">
 </head>
 <body>
-
-    <h1 style="text-align:center">FFRANDOM</h1>
+  <div class='container'>
+    <div class='title'>FFRANDOM</div>
     <div ng-controller='CharacterController'>
-      <pre>{{ randomSecond }}</pre>
-      <img class='image' ng-src="{{randomSecond.image.medium_url}}" />
-      <button ng-click='obj()'>Click it</button>
+      <!-- <pre>{{ randomSecond }}</pre> -->
+      <div class='nameDiv'>
+        <a ng-href='{{ randomSecond.site_detail_url }}' target='_blank' class='name'>{{randomSecond.name}}</a>
+      </div>  
+      <img class='image' ng-src="{{ randomSecond.image.medium_url }}" />
+      <div class='deck'>{{randomSecond.deck}}</div>
+      <button class='roulette ' ng-click='getChars()'><span style="color: aqua">L</span><span style="color:palegreen">i</span><span style="color: magenta">m</span><span style="color: red">i</span><span style="color: cadetblue">t</span></button>
     </div>
-
+  </div>  
 </body>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.min.js'></script>
